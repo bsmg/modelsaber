@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <!-- Start Favicon-->
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cdn.assistant.moe/favicon/modelsaber/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.assistant.moe/favicon/modelsaber/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.assistant.moe/favicon/modelsaber/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.assistant.moe/favicon/modelsaber/favicon-16x16.png">
+  <link rel="manifest" href="https://cdn.assistant.moe/favicon/modelsaber/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://cdn.assistant.moe/favicon/modelsaber/favicon/ms-icon-144x144.png">
+  <!-- End Favicon -->
+  <!-- Start OEmbed -->
+  <meta content="ModelSaber" property="og:site_name">
+  <meta content="ModelSaber API" property="og:title">
+  <meta content="Come wget your models" property="og:description">
+  <meta content="#ebf4f9" name="theme-color">
+  <meta content="/resources/api.png" property="og:image">
+  <!-- End OEmbed -->
+  <title>ModelSaber</title>
+  <link href="https://cdn.assistant.moe/css/bulma.css" media="screen" rel="stylesheet">
+  <link href="https://cdn.assistant.moe/css/custom.css" rel="stylesheet">
+  <link href="https://cdn.assistant.moe/css/light.css" id="light-theme" rel="stylesheet">
+  <link href="https://cdn.assistant.moe/css/dark.css" id="dark-theme" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.assistant.moe/js/theme.js"></script>
+</head>
+<body>
+<!-- Start Nav Bar -->
+<nav class="navbar has-shadow" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item modelsaber-logo" href="/">
+        <i class=icon-modelsaber></i>
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu"  aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-start">
+        <a class="navbar-item upload modal-trigger" data-target="upload" href="/Upload">
+          <i class="fas fa-cloud-upload-alt fa-2x"></i>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item donate" target="_blank" href="https://bs.assistant.moe/Donate">
+          <i class="fab fa-gratipay fa-2x"></i>
+        </a>
+        <a class="navbar-item settings modal-trigger" href="/api">
+          <i class="fas fa-code fa-2x"></i>
+        </a>
+        <a class="navbar-item settings modal-trigger" href="/Manage">
+          <i class="fas fa-cog fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End Nav Bar -->
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <h3 class="title is-3 has-text-centered">Welcome to the ModelSaber API v1!</h3>
+      <p>The currently supported endpoints are:</p>
+      <ul>
+        <li><a href="https://modelsaber.com/api/v1/avatar/get.php">avatar/get.php</a></li>
+        <li><a href="https://modelsaber.com/api/v1/saber/get.php">saber/get.php</a></li>
+        <li><a href="https://modelsaber.com/api/v1/platform/get.php">platform/get.php</a></li>
+      </ul>
+      <p>These will return a JSON object with the available resources in that category.</p>
+      <p>They support the following optional <kbd>GET</kbd> options:</p>
+      <ul>
+        <li><kbd>start=&lt;int&gt;</kbd>: The first index to return.</li>
+        <li><kbd>end=&lt;int&gt;</kbd>: The last index to return.</li>
+        <li><kbd>sort=&lt;date|name|author&gt;</kbd> : The sort method to use. Default is <kbd>sort=date</kbd></li>
+        <li><kbd>sortDirection=&lt;asc|desc&gt;</kbd> : The sort direction to use. Default is <kbd>sortDirection=asc</kbd></li>
+        <li><kbd>filter=&lt;filter1,filter2,etc&gt;</kbd> : Filter results. Comma delimited.</li>
+        <ul>  
+          <li>Allows <kbd>author:&lt;author&gt;</kbd>, <kbd>name:&lt;name&gt;</kbd>, <kbd>&lt;tag&gt;</kbd>, and <kbd>hash:&lt;hash&gt;</kbd> as filters.</li>
+          <li>Allows negative filters with a <kbd>-</kbd> before the filter.</li>
+        </ul>
+      </ul>
+      <p>Example query:</p>
+      <div class="uri-example">
+        <pre><span class="uri-example-url">https://modelsaber.com/api/v1/saber/get.php</span><span class="uri-example-question">?</span><span class="uri-example-option">start</span><span class="uri-example-equals">=</span><span class="uri-example-value">1</span><span class="uri-example-separator">&</span><span class="uri-example-option">end</span><span class="uri-example-equals">=</span><span class="uri-example-value">3</span><span class="uri-example-separator">&</span><span class="uri-example-option">sort</span><span class="uri-example-equals">=</span><span class="uri-example-value">name</span><span class="uri-example-separator">&</span><span class="uri-example-option">sortDirection</span><span class="uri-example-equals">=</span><span class="uri-example-value">desc</span><span class="uri-example-separator">&</span><span class="uri-example-option">filter</span><span class="uri-example-equals">=</span><span class="uri-example-filter-option">author</span><span class="uri-example-filter-colon">:</span><span class="uri-example-filter-value">MissRaynor</span><span class="uri-example-filter-separator">,</span><span class="uri-example-filter-negative">-</span><span class="uri-example-filter-negative-value">Lightning</span></pre>
+      </div>
+      <p>Example response:</p>
+      <pre>
+<code class="language-json">{
+  "1546069167": {
+    "tags": [
+      "Overwatch",
+      "Asymmetry"
+    ],
+    "type": "saber",
+    "name": "Genji Dragon Blade",
+    "author": "MissRaynor",
+    "image": "https://modelsaber.com/files/saber/1546069167/image.jpg",
+    "download": "https://modelsaber.com/files/saber/1546069167/Genji Dragon Blade.saber",
+    "install_link": "modsaber://saber/https://modelsaber.com/files/saber/1546069167/Genji Dragon Blade.saber",
+    "date": "1546069167",
+    "hash": "911e6a8be60bf456dec59c6b4ee43c59"
+    },
+  "1546069282": {
+    "tags": [
+      "FinalFantasy",
+      "FF"
+    ],
+    "type": "saber",
+    "name": "Buster Sword",
+    "author": "MissRaynor",
+    "image": "https://modelsaber.com/files/saber/1546069282/image.jpg",
+    "download": "https://modelsaber.com/files/saber/1546069282/Buster Sword.saber",
+    "install_link": "modsaber://saber/https://modelsaber.com/files/saber/1546069282/Buster Sword.saber",
+    "date": "1546069282",
+    "hash": "964bb251d8d7edefccb1efbbc12b1cb5"
+  }
+}</code></pre>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.assistant.moe/js/burger.js"></script>
+<script src="https://cdn.assistant.moe/js/prism.js"></script>
+</body>
+</html>

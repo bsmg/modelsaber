@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <!-- Start Favicon-->
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cdn.assistant.moe/favicon/modelsaber/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.assistant.moe/favicon/modelsaber/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.assistant.moe/favicon/modelsaber/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.assistant.moe/favicon/modelsaber/favicon-16x16.png">
+  <link rel="manifest" href="https://cdn.assistant.moe/favicon/modelsaber/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <!-- End Favicon -->
+  <!-- Start OEmbed -->
+  <meta content="ModelSaber" property="og:site_name">
+  <meta content="Upload" property="og:title">
+  <meta content="Upload your own models" property="og:description">
+  <meta content="#ebf4f9" name="theme-color">
+  <meta content="/resources/upload.png" property="og:image">
+  <!-- End OEmbed -->
+  <title>ModelSaber</title>
+  <link href="https://cdn.assistant.moe/css/bulma.css" media="screen" rel="stylesheet">
+  <link href="https://cdn.assistant.moe/css/custom.css" rel="stylesheet">
+  <link href="https://cdn.assistant.moe/css/light.css" id="light-theme" rel="stylesheet">
+  <link href="https://cdn.assistant.moe/css/dark.css" id="dark-theme" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.assistant.moe/js/theme.js"></script>
+</head>
+<body>
+<!-- Start Nav Bar -->
+<nav class="navbar has-shadow" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item modelsaber-logo" href="/">
+        <i class=icon-modelsaber></i>
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu"  aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-start">
+        <a class="navbar-item upload modal-trigger" data-target="upload" href="/Upload">
+          <i class="fas fa-cloud-upload-alt fa-2x"></i>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item donate" target="_blank" href="https://bs.assistant.moe/Donate">
+          <i class="fab fa-gratipay fa-2x"></i>
+        </a>
+        <a class="navbar-item settings modal-trigger" href="/api">
+          <i class="fas fa-code fa-2x"></i>
+        </a>
+        <a class="navbar-item settings modal-trigger" href="/Manage">
+          <i class="fas fa-cog fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End Nav Bar -->
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <div>
+        <h4 class="title is-4">Guidelines:</h4>
+        <ul>
+          <li><strong>Image:</strong></li>
+          <ul>
+            <li><strong>MUST</strong> have a <strong>1x1 aspect ratio</strong>.</li>
+            <li>Must be <strong>tasteful</strong> and <strong>appropiate</strong>.</li>
+          </ul>
+          <li><strong>Tags:</strong></li>
+          <ul>
+            <li>Only <strong>one (1)</strong> tag per field, press the green <kbd>+</kbd> to add more tags.</li>
+            <li>Do <strong>NOT</strong> inlcude commas <kbd>,</kbd> in your tags.</li>
+            <li>Make your tags <strong>descriptive</strong>, specially of the item's <strong>capabilities</strong> and <strong>limitations</strong>.</li>
+          </ul>
+        </ul>
+      </div>
+      <hr />
+      <form action="upload.php" method="POST" id="uploadForm" enctype="multipart/form-data">
+        <label class="label is-medium">BeastSaber Username (optional)</label>
+        <div class="field flex">
+          <p class="control">
+            <input class="input" name="bsaber" form="uploadForm" type="text" placeholder="BeastSaber Username">
+          </p>
+        </div>
+        <label class="label is-medium">Comments (optional)</label>
+        <div class="field flex">
+          <p class="control">
+            <textarea class="textarea" name="comments" form="uploadForm" type="text" placeholder="Comments"></textarea>
+          </p>
+        </div>
+        <label class="label is-medium">Tags
+          <button class="button is-rounded is-success is-small" form="none" onClick="addTagInput()">
+            <span class="icon is-small">
+              <i class="fas fa-plus"></i>
+            </span>
+          </button>
+        </label>
+        <div class="field is-grouped is-grouped-multiline" id="tag-container">
+          <div class="field has-addons">
+            <p class="control">
+              <input class="input is-rounded" name="tags[]" form="uploadForm" type="text" placeholder="Tag">
+            </p>
+            <p class="control">
+              <button onclick="this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement)" form="none" class="button is-danger button-delete is-rounded" name="tags[]" form="uploadForm" type="text" placeholder="Tag"></button>
+            </p>
+          </div>
+        </div>
+        <label class="label is-medium">File</label>
+        <div class="field has-addons file">
+          <p class="control">
+            <label class="file-label">
+              <input class="file-input" type="file" accept=".avatar,.saber,.plat" name="file" form="uploadForm" required>
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Select File
+                </span>
+              </span>
+            </label>
+          </p>
+          <p class="control">
+            <label class="file-label">
+              <input class="file-input" type="file" accept=".png,.jpg,.gif" name="image" form="uploadForm" required>
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="far fa-image"></i>
+                </span>
+                <span class="file-label">
+                  Select Image
+                </span>
+              </span>
+            </label>
+          </p>
+          <p class="control">
+            <button class="button upload-button" type="submit" form="uploadForm">
+              Upload
+            </button>
+          </p>
+        </div>
+      </form> 
+    </div>
+  </div>
+</section>
+<script src="https://cdn.assistant.moe/js/burger.js"></script>
+<script src="/resources/tags.js"></script>
+</body>
+</html>

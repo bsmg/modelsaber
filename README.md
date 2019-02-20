@@ -1,2 +1,2 @@
-# modelsaber
-Repository for Beat Saber avatars, sabers, and platforms.
+# ModelSaber
+Repository for Beat Saber Avatar, Sabers, and Platforms
