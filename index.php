@@ -113,6 +113,7 @@ EOF;
       <p>If you have the <a href="https://github.com/lolPants/modsaber-installer/releases">ModSaber Installer</a> installed, you can simply click on the <kbd>Install</kbd> buttons to automatically install these models.</p>
       <p>If you don't, you can still <kbd>Download</kbd> them manually.</p>
       <p>Now with a <strong><em>dark secret...</em></strong></p>
+      <p>If you want to learn to make your own, visit the guides for <a href="https://bs.assistant.moe/Avatars">Avatars</a>, <a href="https://bs.assistant.moe/Sabers">Sabers</a>, and <a href="https://bs.assistant.moe/Platforms">Platforms</a>.</p>
     </div>
   </div>
 </section>
