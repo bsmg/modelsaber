@@ -86,7 +86,7 @@ EOF;
     $id = (string)$object->id;
     $object->image = $url.$id.'/'.$object->image;
     $object->download = $url.$id.'/'.$object->filename;
-    $object->install_link = 'modsaber://'.$type.'/'.$object->download;
+    $object->install_link = 'modelsaber://'.$type.'/'.$id.'/'.$object->filename;
     unset($object->id);
     unset($object->filename);
     $object->date = $id;

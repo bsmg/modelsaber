@@ -118,11 +118,11 @@ EOF;
     $bsaber = $row[7];
     $uploader = $row[8];
     $comments = $row[9];
-    makeCard($name, $author, $type, $url.$type."/".$id."/".$filename, $image, $dir.$type."/".$id."/".$image, $name, $tags, $id, $hash, $bsaber, $approveState, $comments);
+    makeCard($name, $author, $type, $url.$type."/".$id."/".rawurlencode($filename), rawurlencode($filename), $image, $dir.$type."/".$id."/".$image, $name, $tags, $id, $hash, $bsaber, $approveState, $comments);
   }
 }
 
-function makeCard ($name, $author, $type, $link, $image, $imageUrl, $imageAlt, $tags, $id, $hash, $bsaber, $approveState, $comments) {
+function makeCard ($name, $author, $type, $link, $filename, $image, $imageUrl, $imageAlt, $tags, $id, $hash, $bsaber, $approveState, $comments) {
   $link = str_replace("?","%3F",$link);
   switch ($type) {
     case "avatar":
@@ -224,7 +224,7 @@ echo <<<EOF
             <input type="hidden" name="link" value="${link}">
           </form>
           <div class="card-footer">
-            <a href="modsaber://${type}/https://${link}" class="card-footer-item">Install</a>
+            <a href="modelsaber://${type}/${id}/${filename}" class="card-footer-item">Install</a>
             <a href="https://${link}" class="card-footer-item">Download</a>
           </div>
           <div class="card-footer">

@@ -63,7 +63,7 @@ EOF;
     
 
     echo ("    <div class=\"single-item\">");
-    makeSingleCard($name, $author, $type, $url.$type."/".$directID."/".rawurlencode($filename), $dir.$type."/".$directID."/".$image, $name, $tags, $directID, $hash, $bsaber, $comments);
+    makeSingleCard($name, $author, $type, $url.$type."/".$directID."/".rawurlencode($filename), rawurlencode($filename), $dir.$type."/".$directID."/".$image, $name, $tags, $directID, $hash, $bsaber, $comments);
     echo ("    </div>");
   } else {
     $_filters = filter($db, $filter);
@@ -100,7 +100,7 @@ EOF;
       $image = $row[4];
       $tags = explode(',', str_replace("\"","", substr($row[5], 1, -1)));
       if (!isset($total_rows)) $total_rows = $row[6];
-      makeCard($name, $author, $type, $url.$type."/".$id."/".rawurlencode($filename), $dir.$type."/".$id."/".$image, $name, $tags, $id);
+      makeCard($name, $author, $type, $url.$type."/".$id."/".rawurlencode($filename), rawurlencode($filename), $dir.$type."/".$id."/".$image, $name, $tags, $id);
     }
     $pages = ceil($total_rows / $limit);
     if ($pages > 1) {
@@ -157,7 +157,7 @@ EOF;
   pg_close($db);
 }
 
-function makeCard ($name, $author, $type, $link, $imageUrl, $imageAlt, $tags, $id) {
+function makeCard ($name, $author, $type, $link, $filename, $imageUrl, $imageAlt, $tags, $id) {
   $link = str_replace("?","%3F",$link);
   $tagList = "";
   foreach($tags as $tag) {
@@ -206,7 +206,7 @@ echo <<<EOF
             </div>
           </div>
           <div class="card-footer">
-            <a href="modsaber://${type}/${link}" class="card-footer-item">Install</a>
+            <a href="modelsaber://${type}/${id}/${filename}" class="card-footer-item">Install</a>
             <a href="${link}" class="card-footer-item">Download</a>
             <a href="https://modelsaber.com/${superType}/?id=${id}" class="card-footer-item">Details</a>
           </div>
@@ -215,7 +215,7 @@ echo <<<EOF
 EOF;
 }
 
-function makeSingleCard ($name, $author, $type, $link, $imageUrl, $imageAlt, $tags, $id, $hash, $bsaberName, $comments) {
+function makeSingleCard ($name, $author, $type, $link, $filename, $imageUrl, $imageAlt, $tags, $id, $hash, $bsaberName, $comments) {
   $link = str_replace("?","%3F",$link);
   $tagList = "";
   foreach($tags as $tag) {
@@ -249,7 +249,7 @@ echo <<<EOF
             <h3 class="subtitle is-3">${author}</h3>
           </div>
           <div class="itemButtons">
-            <a href="modsaber://${type}/${link}" class="button">Install</a>
+            <a href="modelsaber://${type}/${id}/${filename}" class="button">Install</a>
             <a href="${link}" class="button">Download</a>
             <a onClick="navigator.clipboard.writeText('https://modelsaber.com/${superType}/?id=${id}')" class="button">Copy Link</a>\n
 EOF;

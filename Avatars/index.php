@@ -277,5 +277,6 @@ printCards("avatar", $id, $sort, $sort_dir, $limit, '', '*');
 </section>
 <script src="https://cdn.assistant.moe/js/burger.js"></script>
 <script src="/resources/fetcher.js"></script>
+<script src="/resources/magnify.js"></script>
 </body>
 </html>

@@ -110,7 +110,7 @@ EOF;
     <div class="content">
       <h3 class="title is-3 has-text-centered">Welcome to ModelSaber!</h3>
       <p>ModelSaber is a repository for Avatars, Sabers, and Platforms.</p>
-      <p>If you have the <a href="https://github.com/lolPants/modsaber-installer/releases">ModSaber Installer</a> installed, you can simply click on the <kbd>Install</kbd> buttons to automatically install these models.</p>
+      <p>If you have the <a href="https://github.com/beat-saber-modding-group/BeatSaberModInstaller/releases/">Mod Manager</a> installed, you can simply click on the <kbd>Install</kbd> buttons to automatically install these models.</p>
       <p>If you don't, you can still <kbd>Download</kbd> them manually.</p>
       <p>Now with a <strong><em>dark secret...</em></strong></p>
       <p>If you want to learn to make your own, visit the guides for <a href="https://bs.assistant.moe/Avatars">Avatars</a>, <a href="https://bs.assistant.moe/Sabers">Sabers</a>, and <a href="https://bs.assistant.moe/Platforms">Platforms</a>.</p>
@@ -118,5 +118,6 @@ EOF;
   </div>
 </section>
 <script src="https://cdn.assistant.moe/js/burger.js"></script>
+<script src="/resources/magnify.js"></script>
 </body>
 </html>
