@@ -1,0 +1,92 @@
+# the current environment of the site
+# use 'testing' (without single quotes) for the local site
+# use 'develop' (without single quotes) for the dev site
+# use 'production' (without single quotes) for the live site
+ENV=develop
+
+# example: C:/xampp/htdocs/modelsaber
+ROOT=
+# example: https://modelsaber.com
+WEBROOT=
+# example: C:/xampp/php/php-win.exe
+# should be set to the path to the php commandline interface for background tasks
+PHP_CLI=
+
+# used for discord api integration
+OAUTH2_CLIENT_ID=
+OAUTH2_CLIENT_SECRET=
+OAUTH2_BOT_TOKEN=
+
+# the passwords/URLs for the webhooks
+# all settings have to be set as any unset passwords won't try to send a webhook
+WEBHOOK_PC_AVATARS=
+WEBHOOK_PC_SABERS=
+WEBHOOK_PC_PLATFORMS=
+WEBHOOK_PC_NOTES=
+
+WEBHOOK_QUEST_AVATARS=
+WEBHOOK_QUEST_SABERS=
+WEBHOOK_QUEST_PLATFORMS=
+WEBHOOK_QUEST_NOTES=
+WEBHOOK_QUEST_MISC=
+
+# forge roots
+# example: C:/xampp/htdocs/modelsaber/forge
+FORGE_ROOT=
+# example: https://forge.modelsaber.com
+FORGE_WEBROOT=
+
+# the name of the site in lowercase
+SITE=modelsaber
+# the name of the site in CamelCase
+SITECAMEL=ModelSaber
+# the text written in the footbloq
+FOOTBLOQ="Bobby sucks" - Steven 2019
+# the name of the currently recommended mod installer
+MODINSTALLER_NAME=Mod Assistant
+# the link to the currently recommended mod installer
+MODINSTALLER_LINK=https://github.com/Assistant/ModAssistant
+
+DATABASE_USER=nginx
+DATABASE_PASSWORD=password
+DATABASE_NAME=modelsaber
+DATABASE_DRIVER=pgsql
+# if set to true the database connection will be cached which might increase performance
+DATABASE_PERSISTENT=false
+
+# the mode that should be used for error logging
+# use 'file' (without single quotes) to save the logs to a file
+# use 'console' (without single quotes) to print to logs to the browser console
+# use 'print' (without single quotes) to print the logs to the page
+FISHY_ERROR_MODE=console
+# the path to the log file
+# only used when FISHY_ERROR_MODE is set to 'file'
+# example: C:/xampp/htdocs/modelsaber/log.log
+FISHY_LOG_PATH=
+
+# the allowed file extensions of avatars
+# the first item in the array will be the default for new uploads
+AVATAR_EXTENSIONS=[avatar]
+# the allowed file extensions of sabers
+# the first item in the array will be the default for new uploads
+SABER_EXTENSIONS=[saber]
+# the allowed file extensions of platforms
+# the first item in the array will be the default for new uploads
+PLATFORM_EXTENSIONS=[plat]
+# the allowed file extensions of notes
+# the first item in the array will be the default for new uploads
+NOTE_EXTENSIONS=[bloq,note]
+
+# the maximum filesize for uploaded videos in megabytes
+MAX_VIDEO_FILESIZE=4
+# the minimum image (and video) resolution for uploaded thumbnails in pixels
+MIN_IMAGE_SIZE=512
+
+# the amount of time in seconds before the user gets redirected after uploading a model
+UPLOAD_REDIRECT_DELAY=15
+
+# the maximum amount of API keys that any user is allowed to have.
+MAX_API_KEYS=16
+
+# the amount of seconds to try to connect to remote files before timing out.
+REMOTE_FILE_TIMEOUT=3

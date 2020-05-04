@@ -1,0 +1,20 @@
+{
+ "name": "ModelSaber",
+ "display": "standalone",
+ "start_url": "/",
+ "background_color": "#535aa2",
+ "theme_color": "#535aa2",
+ "gcm_sender_id": "543854341903",
+ "icons": [
+  {
+   "src": "icon-app-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-app-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

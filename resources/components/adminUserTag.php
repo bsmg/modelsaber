@@ -1,0 +1,1 @@
+<span class="tag is-rounded has-text-white" style="margin-left:1em;background-color:red;">Admin</span>

@@ -1,0 +1,13 @@
+Custom Colors
+Custom Trails
+Custom Bombs
+Custom Arrows
+Reactive
+Thin
+FBT
+Cloth
+Dynamic Bones
+EQ
+First-Person Compatible
+Shader Replacement
+NSFW

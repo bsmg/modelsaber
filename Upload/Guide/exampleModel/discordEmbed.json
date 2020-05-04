@@ -1,0 +1,46 @@
+{
+    "content": "https://youtu.be/eii4vBZjbzI",
+    "embeds": [
+        {
+            "title": "Pepe Bloqs",
+            "description": "**Pepe bloqs are nice**\nThis is the description btw, even the line above.",
+            "url": "http://localhost/modelsaber/Bloqs/?id=1564642827&pc",
+            "color": 5462690,
+            "timestamp": "2019-08-01 09:00:27Z",
+            "footer": {
+                "icon_url": "https://laugexd.gitlab.io/modelsaber/icon-192.png",
+                "text": "ModelSaber"
+            },
+            "thumbnail": {
+                "url": "https://cdn.discordapp.com/attachments/346292733239099394/606432405317746698/Bloq.png"
+            },
+            "image": {
+                "url": "https://laugexd.gitlab.io/modelsaber/original.gif"
+            },
+            "author": {
+                "name": "Laugexd",
+                "url": "http://localhost/modelsaber/Profile/?user=146243483898871808",
+                "icon_url": "https://cdn.discordapp.com/avatars/146243483898871808/70f0b54942423ec977ab8f93d6537459.png?size=64"
+            },
+            "fields": [
+                {
+                    "name": "Tags:",
+                    "value": "Custom Colors, Fishy, Dark"
+                },
+                {
+                    "name": "Features:",
+                    "value": "Custom Color Support: :white_check_mark:  \nCustom Arrows: :white_check_mark:  \nCustom Bombs: :x:  \nShader Replacement Support: :white_check_mark:"
+                },
+                {
+                    "name": "Dependencies:",
+                    "value": "Custom Colors: 1.0.4"
+                }
+            ]
+        },
+        {
+            "title": "Download <:cmb:586281829028331525>",
+            "url": "http://localhost/modelsaber/Bloqs/index.php?id=1564642827&pc",
+            "color": 4781122
+        }
+    ]
+}

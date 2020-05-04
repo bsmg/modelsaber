@@ -1,0 +1,79 @@
+/*@media screen and (max-width: 720px) {
+.item {
+    width: calc(100%/4 - (3/4*1em));
+}
+.items > .item:nth-of-type(4n) {
+        margin-right: 0;
+    }
+}*/
+#quest .itemSingle {
+    flex-flow: row wrap;
+}
+#quest .itemSingle .itemInfo {
+    padding: 0;
+}
+#quest .itemSingle > .image {
+    width: 50%;
+}
+#quest .itemSingle > .show-quest {
+    width: 50%;
+    padding: 0 1em;
+}
+#quest .itemSingle .itemButtons a {
+    flex-basis: 45%;
+}
+#quest .show-quest {
+    display: initial;
+}
+#quest .quest-hidden {
+    display: none !important;
+}
+#quest .mobile-hidden {
+    display: initial;
+}
+#quest #contributors .card .card-content .content .description {
+    height: 4.5rem;
+}
+@media screen and (max-width:768px) {
+ #quest .login-form {
+  width:95%;
+  margin-left: 2.5% !important;
+ }
+ #quest .item {
+  width:calc(100%/3 - (2/3*1em));
+  margin-right: 1em !important;
+ }
+ #quest .items-admin>div:nth-child(3n), #quest .items>div:nth-child(3n) {
+  margin-right: 0 !important;
+ }
+}
+@media screen and (min-width:769px) and (max-width:1023px) {
+ #quest .login-form {
+  width:90%;
+  margin-left: 5% !important;
+ }
+ #quest .item {
+  width:calc(100%/4 - (3/4*1em));
+  margin-right: 1em !important;
+ }
+ #quest .items-admin>div:nth-child(4n), #quest .items>div:nth-child(4n) {
+  margin-right: 0 !important;
+ }
+}
+#quest .itemInfo > .field:last-child {
+    position: relative;
+    padding: 0;
+}
+#quest .card-footer .card-footer-item.quest-only-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+@media screen and (max-width: 1023px) {
+    #quest .mobile-hidden {
+    display: inherit !important;
+    }
+    #quest .mobile-only-child {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}

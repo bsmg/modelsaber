@@ -1,0 +1,62 @@
+{
+    "license": {
+        "BY": true,
+        "SA": false,
+        "ND": false,
+        "NC": false,
+        "NON": false,
+        "source": "https://sketchfab.com/3d-models/pepe-the-frog-3c22a7cf4e3a41338006eb7564db4afa",
+        "link": "https://creativecommons.org/licenses/by/4.0/"
+        
+    },
+    "model": {
+        "id": "id here",
+        "name": "Example Bloqs",
+        "author": "Laugexd",
+        "type": "bloq",
+        "file": "pathToTempFile",
+        "image": {
+            "file": "ImageAsString",
+            "extension": "png"
+        },
+        "hash": "HashHere",
+        "tags": [
+            "Custom Colors",
+            "Custom Arrows",
+            "Shader Replacement Support",
+            "Meme"
+        ],
+        "description": [
+            "## The description to be shown on modelsaber",
+            "a new line tag is inserted after each value in the array.",
+            "---",
+            "it also supports **markdown** for *formatting*."
+        ],
+        "dependencies": {
+            "mods": {
+                "Custom Notes": "1.0.4"
+            },
+            "scripts": {
+                "someScriptNameHere": "1.0.0"
+            }
+        }
+    },
+    "embed": {
+        "youtube": "https://www.youtube.com/watch?v=eii4vBZjbzI",
+        "description": [
+            "Pepe Bloqs",
+            "Inverted normals pepe hype!",
+            "Requires the newest version of custom notes in #pc-mods"
+        ],
+        "features": {
+            "Custom Color Support": true,
+            "Custom Arrows": true,
+            "Custom Bombs": false,
+            "Shader Replacement Support": true
+        }
+    },
+    "upload": {
+        "platform": "pc",
+        "format": "uabe"
+    }
+}

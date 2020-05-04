@@ -1,0 +1,98 @@
+/*Fishy utils, by laugexd*/
+
+/*No Hover
+no-hover is a tag used for not showing hover effects.
+the stylesheet needs to support it however.
+*/
+/*@keyframe fishyOverlay {
+    from {background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));},
+    to {linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0));}
+}*/
+/*Error logging*/
+.fishy-error,
+.fishy-warning,
+.fishy-notice,
+.fishy-log {
+    color: white;
+}
+.fishy-variable {
+    text-decoration: underline;
+}
+.fishy-error strong,
+.fishy-unknown-error strong {
+    color: red;
+}
+.fishy-warning strong {
+    color: orange;
+}
+.fishy-notice strong {
+    color: blue;
+}
+.fishy-log strong {
+    color: white;
+}
+/*Helpers*/
+.reset-cursor {
+    cursor: default !important;
+}
+.is-borderless {
+    border: none !important;
+}
+.is-singleLine, .is-singleLine * {
+    white-space: nowrap !important;
+}
+.desktop-hidden {
+    display: none !important;
+}
+.is-toggleable {
+    display: none;
+}
+.is-active {
+    display: initial;
+}
+/*Color Helpers*/
+.is-gay {
+    background: linear-gradient(
+        red,
+        blue
+        ) !important;
+}
+.has-text-gay {
+    background: red;
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+.has-border-gay {
+position: relative;
+background-image: linear-gradient(90deg, red, blue) !important;
+z-index: 1;
+}
+
+.has-border-gay::before {
+    position: absolute;
+    top: 1px; bottom: 1px;
+    left: 1px; right: 1px;
+    background-color: #000 !important;
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
+}
+/*Mobile Helpers*/
+@media screen and (max-width: 1023px) {
+    .mobile-hidden {
+    display: none !important;
+    }
+    .desktop-hidden {
+    display: initial !important;
+}
+.mobile-block-link {
+    pointer-events: none;
+}
+.mobile-order-top {
+    order: -1;
+}
+}

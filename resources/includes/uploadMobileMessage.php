@@ -1,0 +1,1 @@
+<span id="uploadMobile" class="is-size-4">Uploads are not currently supported on mobile devices</span>

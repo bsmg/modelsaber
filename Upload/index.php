@@ -1,0 +1,161 @@
+<?php
+require_once '../resources/includes/constants.php';
+if (!$currentUser->isVerified()) {
+  HTTPError(403);
+}
+if (!$currentUser->canUpload()) {
+  HTTPError(403);
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+   Start Favicon
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.assistant.moe/favicon/modelsaber/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cdn.assistant.moe/favicon/modelsaber/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.assistant.moe/favicon/modelsaber/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.assistant.moe/favicon/modelsaber/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.assistant.moe/favicon/modelsaber/favicon-16x16.png">
+  <link rel="manifest" href="https://cdn.assistant.moe/favicon/modelsaber/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+   End Favicon 
+  <title>ModelSaber</title>
+  <link href="https://cdn.assistant.moe/css/bulma.css" media="screen" rel="stylesheet">
+  <link href="https://cdn.assistant.moe/css/custom.css" rel="stylesheet">
+  <link href="https://cdn.assistant.moe/css/light.css" id="light-theme" rel="stylesheet">
+  <link href="https://cdn.assistant.moe/css/dark.css" id="dark-theme" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.assistant.moe/js/theme.js"></script>-->
+<?php require_once '../head.php'; ?>
+<!--Start OEmbed--> 
+  <meta content="ModelSaber" property="og:site_name">
+  <meta content="Upload" property="og:title">
+  <meta content="Upload your own models" property="og:description">
+  <meta content="#ebf4f9" name="theme-color">
+  <meta content="/resources/upload.png" property="og:image">
+<!--End OEmbed--> 
+</head>
+<body>
+<?php include_once ROOT . '/resources/includes/menu.php'; ?>
+<section class="section">
+  <div class="container">
+    <!-- Start Tabs -->
+    <div class="tabs is-centered is-boxed">
+      <ul>
+        <li class="is-active">
+          <a href="<?= WEBROOT ?>/Upload?<?= getDevicePlatform() ?>">Simple upload</a>
+        </li>
+        <li>
+          <a href="<?= WEBROOT ?>/Upload/Advanced?<?= getDevicePlatform() ?>">Advanced upload</a>
+        </li>
+      </ul>
+    </div>
+    <!-- End Tabs -->
+    <div class="content">
+      <div>
+        <h4 class="title is-4">Guidelines:</h4>
+        <ul>
+          <li><strong>General:</strong></li>
+          <ul>
+            <li><strong>NEVER</strong> rip assets or upload a model without the original author's consent. We do <strong>NOT</strong> condone piracy in any way or form!</li>
+          </ul>
+          <li><strong>Thumbnails:</strong></li>
+          <ul>
+            <li><strong>MUST</strong> have a <strong>1x1 aspect ratio</strong>.</li>
+            <li>Must be <strong>tasteful</strong> and <strong>appropiate</strong>.</li>
+            <li><strong>MUST</strong> have the same filename as the model file. <?php info("When uploading mutiple files this still aplies") ?></li>
+            <li>Thumbnails must be <b>at least</b> <?= MINIMAGESIZE; ?> by <?= MINIMAGESIZE; ?> pixels.</li>
+            <li>Can be of the image types .png, .jpeg, .svg, and .gif or of the video types .mp4 and .webm.</li>
+            <li>The max filesize of a video is <?= MAXVIDEOFILESIZE ?> MB!</li>
+          </ul>
+          <li><strong>Tags:</strong></li>
+          <ul>
+            <li>Open the <kbd>Tag Picker&trade;</kbd> to select, deselect, or add tags.</li>
+            <li>Only <strong>one (1)</strong> tag per field, press the <kbd>Add tag</kbd> button to add more tags.</li>
+            <li>Do <strong>NOT</strong> inlcude commas <kbd>,</kbd> in your tags.</li>
+            <li>Make your tags <strong>descriptive</strong>, specially of the item's <strong>capabilities</strong> and <strong>limitations</strong>.</li>
+          </ul>
+        </ul>
+      </div>
+      <hr />
+      <form class="is-relative" action="upload.php" method="POST" id="uploadForm" enctype="multipart/form-data">
+        <input type="hidden" name="formType" value="simple">
+        <?php require_once ROOT . '/resources/components/licenseSelector.php'; ?>
+        
+        <label class="label is-medium">Description (optional)</label>
+        <div class="field flex" style="display: block;">
+          <div class="control">
+            <textarea class="textarea" name="comments" form="uploadForm" type="text" placeholder="Comments"></textarea>
+          </div>
+          <p class="help"><?= MARKDOWNSUPPORT ?></p>
+        </div>
+        
+        <label class="label is-medium">Tags</label>
+        <div class="field is-grouped is-grouped-multiline" id="tag-container">
+          <div class="field flex">
+            <div class="control has-icons-left">
+              <button onclick="document.getElementById('tagPickerModal').classList.add('is-active')" form="none" class="button is-fullwidth" name="tags" form="uploadForm" placeholder="Tag">Open Tag Picker&trade;</button>
+              <span class="icon is-left">
+                <i class="fas fa-tags"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <label class="label is-medium">File</label>
+        <div class="field flex has-addons file">
+          <div class="control">
+            <label class="file-label">
+              <input class="file-input" type="file" accept="<?= $helper->getFileExtensions() ?>" name="file[]" form="uploadForm" required>
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Select File
+                </span>
+              </span>
+            </label>
+          </div>
+          
+          <div class="control">
+            <label class="file-label">
+              <input class="file-input" type="file" accept="<?= SUPPORTED_IMAGE_EXTENSIONS ?>" name="image" form="uploadForm" required>
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="far fa-image"></i>
+                </span>
+                <span class="file-label">
+                  Select Thumbnail
+                </span>
+              </span>
+            </label>
+          </div>
+          
+          <div class="control">
+            <button class="button upload-button" type="submit" form="uploadForm">
+              Upload
+            </button>
+          </div>
+        </div>
+        
+        <?php include_once ROOT . '/resources/components/tagPicker.php'; ?>
+      </form>
+      <?php include_once ROOT . '/resources/includes/uploadMobileMessage.php'; ?>
+    </div>
+  </div>
+</section>
+<?php include_once ROOT . '/resources/includes/scripts.php'; ?>
+</body>
+</html>
