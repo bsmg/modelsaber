@@ -337,8 +337,8 @@ class Model {
     $url = WEBROOT . '/';
     
     if (!$currentUser->isVerified()) {
-      trigger_error('You must be logged in and have a accepted the terms of service to upload');
-      failed($url, 'You must be logged in and have a accepted the terms of service to upload');
+      trigger_error('You must be logged in and have accepted the terms of service to upload');
+      failed($url, 'You must be logged in and have accepted the terms of service to upload');
       die();
     }
 
@@ -392,6 +392,9 @@ class Model {
         break;
       case "saber":
         $ext = 'saber';
+        break;
+        case "qsaber":
+        $ext = 'qsaber';
         break;
       case "platform":
         $ext = 'plat';
