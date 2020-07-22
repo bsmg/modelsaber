@@ -12,8 +12,8 @@ class dbConnection {
   private $driver = 'pgsql';
   private $user;
   private $password;
-  private $host = "127.0.0.1";
-  private $port = "5432";
+  private $host;
+  private $port;
   private $dbname;
   private $persistent = false;
   private $db;
@@ -22,6 +22,8 @@ class dbConnection {
     $helper = Helper::getInstance();
     $this->user = $helper->setting('DATABASE_USER');
     $this->password = $helper->setting('DATABASE_PASSWORD');
+    $this->host = $helper->setting('DATABASE_HOST');
+    $this->port = $helper->setting('DATABASE_PORT');
     $this->dbname = $helper->setting('DATABASE_NAME');
     $this->driver = $helper->setting('DATABASE_DRIVER');
     $this->persistent = $helper->setting('DATABASE_PERSISTENT');
