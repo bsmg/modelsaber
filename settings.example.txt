@@ -47,6 +47,8 @@ MODINSTALLER_NAME=Mod Assistant
 # the link to the currently recommended mod installer
 MODINSTALLER_LINK=https://github.com/Assistant/ModAssistant
 
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
 DATABASE_USER=nginx
 DATABASE_PASSWORD=password
 DATABASE_NAME=modelsaber
