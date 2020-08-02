@@ -21,6 +21,8 @@
 /webhook_results
 
 .git
+.github
 .gitignore
+Dockerfile
 .dockerignore
 README.md
