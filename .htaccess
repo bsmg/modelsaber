@@ -1,0 +1,9 @@
+<Files "settings.txt">
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "log.log">
+  Order Allow,Deny
+  Deny from all
+</Files>
