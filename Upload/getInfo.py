@@ -26,8 +26,18 @@ try:
                 elif object.type == "AvatarDescriptor":
                     fileType = "avatar"
                     data = object.read()
-                    objectName = data["AvatarName"]
-                    objectAuthor = data["AuthorName"]
+
+                    # Custom Avatars plugin changed where it stores name/author information
+                    # try newer location, and fallback to older location.
+                    if "name" in data:
+                        objectName = data["name"]
+                    else:
+                        objectName = data["AvatarName"]
+                    if "author" in data:
+                        objectAuthor = data["author"]
+                    else:
+                        objectAuthor = data["AuthorName"]
+
                     shouldstop = 1
                 elif object.type == "CustomPlatform":
                     fileType = "platform"
