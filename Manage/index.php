@@ -91,16 +91,6 @@ if (isset($page)) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--  <meta content="text/html; charset=utf-8" http-equiv="content-type">
-      <title><?= SITECAMEL ?></title>
-      <link href="https://cdn.assistant.moe/css/bulma.css" media="screen" rel="stylesheet">
-      <link href="https://cdn.assistant.moe/css/custom.css" rel="stylesheet">
-      <link href="https://cdn.assistant.moe/css/light.css" id="light-theme" rel="stylesheet">
-      <link href="https://cdn.assistant.moe/css/dark.css" id="dark-theme" rel="stylesheet">
-      <link href="<?= WEBROOT ?>/resources/input.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="https://cdn.assistant.moe/js/theme.js"></script>-->
     <?php require_once ROOT . '/head.php'; ?>
     <?php require_once ROOT . '/resources/includes/sort.php'; ?>
   </head>

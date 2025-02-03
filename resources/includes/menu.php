@@ -75,12 +75,6 @@
           require_once ROOT . '/resources/includes/sortMenu.php';
         }
         ?>
-        <a class="navbar-item donate" target="_blank" href="https://bs.assistant.moe/Donate" title="Donate">
-          <span class="icon is-large">
-            <i class="fab fa-gratipay fa-2x"></i>
-          </span>
-          <span class="desktop-hidden">Donate</span>
-        </a>
         <a class="navbar-item settings modal-trigger" href="<?= WEBROOT ?>/About" title="About">
           <span class="icon is-large">
             <i class="fas fa-info-circle fa-2x"></i>

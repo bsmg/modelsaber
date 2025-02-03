@@ -1,0 +1,355 @@
+/* light theme */
+
+html {
+  background-color: #ebf4f9;
+}
+
+kbd {
+  color: #fff;
+  background-color: #456795;
+}
+
+a>kbd {
+  border-color: #800080;
+}
+
+kbd:has(a) {
+  border-color: #800080;
+}
+
+.failed-message i {
+  color: #ff5555;
+}
+
+hr {
+  background-color: #b4cef2;
+}
+
+.hero-body {
+  background-color: #d6ecff;
+}
+
+.footer {
+  background-color: #ebf4f9;
+}
+
+/* *** Navbar *** */
+.navbar,
+.navbar-menu,
+.navbar-dropdown {
+  background-color: #e7f0f5;
+}
+
+.navbar.has-shadow {
+  box-shadow: 0 3px 3px 0px #e0e7e7;
+}
+
+a.navbar-item:hover,
+a.navbar-link:hover,
+.navbar-item.has-dropdown:hover .navbar-link,
+.navbar-item.has-dropdown.is-active .navbar-link {
+  background-color: #e3e9f4 !important;
+  color: #80379c;
+}
+
+a.navbar-item.twitch:hover {
+  color: #6441a5 !important;
+}
+
+a.navbar-item.twitter:hover {
+  color: #00aced !important;
+}
+
+a.navbar-item.youtube:hover {
+  color: #FF0000 !important;
+}
+
+a.navbar-item.discord:hover {
+  color: #738ADB !important;
+}
+
+a.navbar-item.donate:hover {
+  color: #339966 !important;
+}
+
+a.navbar-item.home:hover {
+  color: #dd7777 !important;
+}
+
+a.navbar-item.upload:hover {
+  color: #00CCFF !important;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #80379c;
+}
+
+.tabs.is-boxed li.is-active a {
+  background-color: #ebf4f9;
+}
+
+.tabs.is-boxed a:hover {
+  background-color: transparent;
+  border-bottom-color: #b4cef2;
+  color: #3273dc;
+}
+
+.tabs.is-boxed li.is-active a {
+  background-color: #ebf4f9;
+  border-color: #b4cef2;
+}
+
+.tabs ul {
+  border-bottom-color: #b4cef2;
+}
+
+/* *** Card *** */
+.card .card-content .media-content .title {
+  color: #EEE;
+}
+
+.card .card-content .media-content .subtitle {
+  color: #CCC;
+}
+
+.card-content {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* *** Uri example *** */
+.uri-example {
+  background-color: #fdf6e3;
+}
+
+.uri-example pre {
+  background-color: #fdf6e3;
+}
+
+.uri-example-url {
+  color: #a4a4a4;
+}
+
+.uri-example-question {
+  color: #6f6f6f;
+}
+
+.uri-example-option {
+  color: #268bd2;
+}
+
+.uri-example-equals {
+  color: #777;
+}
+
+.uri-example-value {
+  color: #2aa198;
+}
+
+.uri-example-separator {
+  color: #b1b1b1;
+}
+
+.uri-example-filter-option {
+  color: #26b4d2;
+}
+
+.uri-example-filter-colon {
+  color: #26b4d2;
+}
+
+.uri-example-filter-value {
+  color: #10b451;
+}
+
+.uri-example-filter-separator {
+  color: #2f2638;
+}
+
+.uri-example-filter-negative {
+  color: #ff0000;
+}
+
+.uri-example-filter-negative-value {
+  color: #ff8383;
+}
+
+
+/* *** PrismJS Solarized Light *** */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #657b83;
+  /* base00 */
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  background: #073642;
+  /* base02 */
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  background: #073642;
+  /* base02 */
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre)>code[class*="language-"],
+pre[class*="language-"] {
+  background-color: #fdf6e3;
+  /* base3 */
+}
+
+/* Inline code */
+:not(pre)>code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #93a1a1;
+  /* base1 */
+}
+
+.token.punctuation {
+  color: #586e75;
+  /* base01 */
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #268bd2;
+  /* blue */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.url,
+.token.inserted {
+  color: #2aa198;
+  /* cyan */
+}
+
+.token.entity {
+  color: #657b83;
+  /* base00 */
+  background: #eee8d5;
+  /* base2 */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #859900;
+  /* green */
+}
+
+.token.function,
+.token.class-name {
+  color: #b58900;
+  /* yellow */
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #cb4b16;
+  /* orange */
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* FAQ */
+
+.faq-entry kbd a {
+  color: #cbf0ff;
+}
+
+.faq-entry kbd a:hover {
+  color: #FFF;
+}
+
+.faq-entry:target {
+  background-color: #222;
+  color: #DDD;
+}
+
+.faq-entry:target h4 {
+  color: #DDD !important;
+}
+
+.faq-entry:target p {
+  color: #DDD !important;
+}
+
+.faq-entry:target a:hover {
+  color: #666;
+}
+
+.faq-entry:target kbd {
+  color: #cbf0ff;
+  background-color: #EEE;
+}
+
+.faq-entry:target kbd a {
+  color: #456795;
+}
+
+.faq-entry:target kbd a:hover {
+  color: #444;
+}

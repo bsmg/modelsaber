@@ -119,6 +119,6 @@ echo json_encode(json_decode(file_get_contents($apiPath . 'get.php?' . $url)), J
   </div>
 </section>
   <?php require_once ROOT . '/resources/includes/scripts.php'; ?>
-<script src="https://cdn.assistant.moe/js/prism.js"></script>
+<script src="<?= WEBROOT ?>/resources/js/prism.js"></script>
 </body>
 </html>

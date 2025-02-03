@@ -1,0 +1,476 @@
+html {
+  background-color: #242424
+}
+
+kbd {
+  color: #222;
+  background-color: #ddd
+}
+
+a>kbd {
+  border-color: #59b0f4
+}
+
+kbd:has(a) {
+  border-color: #59b0f4
+}
+
+.failed-message i {
+  color: #f55
+}
+
+hr {
+  background-color: #59b0f4
+}
+
+strong {
+  color: #eee
+}
+
+.content table,
+.content table th,
+.content table td {
+  color: #fff
+}
+
+.hero-body {
+  background-color: #303030
+}
+
+.subtitle {
+  color: #8c8c8c
+}
+
+a:hover {
+  color: #888
+}
+
+.footer {
+  background-color: #242424
+}
+
+.button.upload-button {
+  color: #eee;
+  border-color: #eee
+}
+
+.button.upload-button:hover {
+  background-color: #eee;
+  color: #363636
+}
+
+.navbar,
+.navbar-menu,
+.navbar-dropdown {
+  background-color: #222
+}
+
+.navbar.has-shadow {
+  box-shadow: 0 3px 3px 0 #111
+}
+
+.navbar-item {
+  color: #eee
+}
+
+.navbar-link:not(.is-arrowless) {
+  color: #eee
+}
+
+a.navbar-item:hover,
+a.navbar-link:hover,
+.navbar-item.has-dropdown:hover .navbar-link,
+.navbar-item.has-dropdown.is-active .navbar-link {
+  background-color: #333 !important;
+  color: #80379c
+}
+
+a.navbar-item.twitch:hover {
+  color: #6441a5 !important
+}
+
+a.navbar-item.twitter:hover {
+  color: #00aced !important
+}
+
+a.navbar-item.youtube:hover {
+  color: red !important
+}
+
+a.navbar-item.discord:hover {
+  color: #738adb !important
+}
+
+a.navbar-item.donate:hover {
+  color: #396 !important
+}
+
+a.navbar-item.home:hover {
+  color: #d77 !important
+}
+
+a.navbar-item.upload:hover {
+  color: #0cf !important
+}
+
+.button {
+  background-color: #363636;
+  color: #f5f5f5;
+  border-color: #59b0f4
+}
+
+.pagination-link,
+.pagination-next,
+.pagination-previous {
+  background-color: #000;
+  color: #eee;
+  border-color: #59b0f4
+}
+
+.button:hover,
+.button.is-hovered {
+  color: #59b0f4
+}
+
+.button.is-success {
+  background-color: #59b0f4
+}
+
+.button.is-primary {
+  background-color: #59b0f4
+}
+
+.file-cta,
+select {
+  background-color: #444;
+  color: #eee
+}
+
+#currentSort {
+  color: #eee
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #eee !important
+}
+
+.input,
+.textarea {
+  background-color: #000;
+  color: #eee;
+  border-color: #59b0f4
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #dedede
+}
+
+label {
+  color: #fff !important
+}
+
+.navbar-dropdown {
+  border-top: 2px solid #59b0f4
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #80379c
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #eee
+}
+
+p a {
+  color: #59b0f4
+}
+
+kbd a {
+  color: #0069bc
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+  border-color: #59b0f4
+}
+
+.tabs a {
+  color: #eee
+}
+
+.tabs a:hover {
+  color: #eee
+}
+
+.tabs.is-boxed a:hover {
+  background-color: transparent;
+  border-bottom-color: #59b0f4;
+  color: #3273dc
+}
+
+.tabs.is-boxed li.is-active a {
+  background-color: #242424;
+  border-color: #59b0f4
+}
+
+.tabs ul {
+  border-bottom-color: #59b0f4
+}
+
+ul li,
+ul li strong,
+ol li,
+ol li strong {
+  color: #eee
+}
+
+ul li a,
+ol li a {
+  color: #59b0f4
+}
+
+.content h3,
+p {
+  color: #eee !important
+}
+
+.card .card-content .media-content .title {
+  color: #eee
+}
+
+.card .card-content .media-content .subtitle {
+  color: #ccc
+}
+
+.card-content {
+  background-color: rgba(0, 0, 0, .75)
+}
+
+.card {
+  background-color: #333
+}
+
+.card-footer,
+.card-footer a,
+.card-footer .card-footer-item {
+  border-color: #242424 !important;
+  color: #59b0f4
+}
+
+.modal,
+.modal-card,
+.modal-card-head p,
+.modal-card-head h3,
+.modal-card-body p,
+.modal-card-body h3 {
+  color: #363636 !important
+}
+
+.uri-example {
+  background-color: #272822
+}
+
+.uri-example pre {
+  background-color: #272822
+}
+
+.uri-example-url {
+  color: #6f6f6f
+}
+
+.uri-example-question {
+  color: #a4a4a4
+}
+
+.uri-example-option {
+  color: #f92672
+}
+
+.uri-example-equals {
+  color: #777
+}
+
+.uri-example-value {
+  color: #a6e22e
+}
+
+.uri-example-separator {
+  color: #b1b1b1
+}
+
+.uri-example-filter-option {
+  color: #ff00a2
+}
+
+.uri-example-filter-colon {
+  color: #ff00a2
+}
+
+.uri-example-filter-value {
+  color: #10b451
+}
+
+.uri-example-filter-separator {
+  color: #bfbfbf
+}
+
+.uri-example-filter-negative {
+  color: red
+}
+
+.uri-example-filter-negative-value {
+  color: red
+}
+
+code[class*=language-],
+pre[class*=language-] {
+  color: #f8f8f2;
+  background: 0 0;
+  text-shadow: 0 1px rgba(0, 0, 0, .3);
+  font-family: Consolas, Monaco, andale mono, ubuntu mono, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none
+}
+
+pre[class*=language-] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: .3em
+}
+
+:not(pre)>code[class*=language-],
+pre[class*=language-] {
+  background: #272822
+}
+
+:not(pre)>code[class*=language-] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #708090
+}
+
+.token.punctuation {
+  color: #f8f8f2
+}
+
+.namespace {
+  opacity: .7
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f92672
+}
+
+.token.boolean,
+.token.number {
+  color: #ae81ff
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a6e22e
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #e6db74
+}
+
+.token.keyword {
+  color: #66d9ef
+}
+
+.token.regex,
+.token.important {
+  color: #fd971f
+}
+
+.token.important,
+.token.bold {
+  font-weight: 700
+}
+
+.token.italic {
+  font-style: italic
+}
+
+.token.entity {
+  cursor: help
+}
+
+.faq-entry:target {
+  background-color: #ddd;
+  color: #222
+}
+
+.faq-entry:target h4 {
+  color: #222 !important
+}
+
+.faq-entry:target p {
+  color: #222 !important
+}
+
+.faq-entry:target a:hover {
+  color: #666
+}
+
+.faq-entry:target kbd {
+  color: #eee;
+  background-color: #656565
+}
+
+.faq-entry:target kbd a {
+  color: #a7e6ff
+}
+
+.faq-entry:target kbd a:hover {
+  color: #ccc
+}
+
+#players,
+#players tr th,
+#roomStatus p span {
+  color: #ddd
+}

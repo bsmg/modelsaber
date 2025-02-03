@@ -25,7 +25,7 @@ require_once '../resources/includes/constants.php';
       <p>If you have the <a href="https://github.com/Assistant/ModAssistant">Mod Assistant</a> installed, you can simply click on the <kbd>Install</kbd> buttons to automatically install these models.</p>
       <p>If you don't, you can still <kbd>Download</kbd> them manually.</p>
       <p>Now with a <strong><em>dark secret...</em></strong></p>
-      <p>If you want to learn to make your own, visit the guides for <a href="https://bs.assistant.moe/Avatars"><?= ucfirst(AVATARS) ?></a>, <a href="https://bs.assistant.moe/Sabers"><?= ucfirst(SABERS) ?></a>, <a href="https://bs.assistant.moe/Platforms"><?= ucfirst(PLATFORMS) ?></a>, and <a href="https://bs.assistant.moe/Bloqs"><?= ucfirst(NOTES) ?></a>.</p>
+      <p>If you want to learn to make your own, visit the guides for <a href="https://bsmg.wiki/models/custom-avatars.html"><?= ucfirst(AVATARS) ?></a>, <a href="https://bsmg.wiki/models/custom-sabers.html"><?= ucfirst(SABERS) ?></a>, <a href="https://bsmg.wiki/models/custom-platforms.html"><?= ucfirst(PLATFORMS) ?></a>, and <a href="https://bsmg.wiki/models/custom-notes.html"><?= ucfirst(NOTES) ?></a>.</p>
       <p>You can also join the <a href="https://discord.gg/beatsabermods">BSMG Discord</a> if you have any further questions.</p>
     </div>
   </div>

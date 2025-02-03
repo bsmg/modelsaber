@@ -1,0 +1,6 @@
+document.addEventListener('DOMContentLoaded',()=>{const $navbarBurgers=Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'),0)
+const $mobileToggle=Array.prototype.slice.call(document.querySelectorAll('.mobile-toggle'),0)
+const $arrays=$navbarBurgers.concat($mobileToggle)
+if($arrays.length>0){$arrays.forEach(el=>{el.addEventListener('click',()=>{let target=document.getElementById(el.dataset.target)
+el.classList.toggle('is-active')
+target.classList.toggle('is-active')})})}})
