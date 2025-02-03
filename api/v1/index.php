@@ -59,6 +59,6 @@ echo json_encode(json_decode(file_get_contents($url)), JSON_PRETTY_PRINT | JSON_
   </div>
 </section>
   <?php require_once ROOT . '/resources/includes/scripts.php'; ?>
-<script src="https://cdn.assistant.moe/js/prism.js"></script>
+<script src="<?= WEBROOT ?>/resources/js/prism.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 FROM php:7-apache-buster
 
 RUN apt-get update && \
-  apt-get install -y libpq-dev python3 python3-pip libonig-dev git && \
+  apt-get install -y libpq-dev python3 python3-pip libonig-dev zlib1g-dev libjpeg-dev git && \
   pip3 install git+https://github.com/HearthSim/UnityPack.git@f8cdc2516538d189606a76986ad2d71c3fad5f8b#egg=unitypack && \
   docker-php-ext-install pdo_pgsql exif mbstring && \
   cp -v "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
