@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 FROM php:7-apache-buster
 
 RUN apt-get update && \
